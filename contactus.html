@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .contact {
+        color: white;
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url(wall.jpg);
+        background-size: cover;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+
+      .contact.content {
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .contact.h1 {
+        font-size: 50px;
+        font-weight: 500px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .contact.content p {
+        font-weight: 300px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .container.contact-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .container.contact-info.box {
+        position: relative;
+        display: flex;
+      }
+
+      .container.contact-info.box.icon {
+        min-width: 60px;
+        height: 60px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+      }
+
+      .container.contact-info.box.text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: white;
+        flex-direction: column;
+        font-weight: 300px;
+      }
+
+      .container.contact-info.box.text h3 {
+        font-weight: 500px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contact">
+      <h1>Contact us</h1>
+      <div class="content">
+        <p>
+          Feel free to leave us a message or give us a call for any enquiries.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="contact-info">
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-map-pin" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>
+                38 Oystercatcher Road. <br />
+                Pelican Park. <br />
+                Cape Town. <br />
+                7941.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>(+27) 21 345 6789</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Email Address</h3>
+              <p>info@bookmyservice.com</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon">
+              <i class="fab fa-instagram-square"></i>
+            </div>
+            <div class="text">
+              <h3>Instagram</h3>
+              <p>
+                <a href="https://www.instagram.com/fandfwoodworks/"
+                  >BookMyService</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon">
+              <i class="fab fa-facebook-square"></i>
+            </div>
+            <div class="text">
+              <h3>Facebook</h3>
+              <p>
+                <a href="https://www.facebook.com/fandfwoodworks"
+                  >BookMyService</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

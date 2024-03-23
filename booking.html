@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyService - Book Now</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional styles for the booking page */
+      body {
+        position: relative;
+        min-height: 100vh; /* Ensure the body fills the viewport height */
+      }
+      .booking-form {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .booking-form h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      .booking-form form {
+        display: inline-block;
+        text-align: left;
+      }
+      .booking-form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .booking-form input[type="text"],
+      .booking-form input[type="email"],
+      .booking-form input[type="tel"],
+      .booking-form textarea,
+      .booking-form input[type="date"],
+      .booking-form input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      .booking-form input[type="submit"] {
+        padding: 12px 30px;
+        background-color: #ff6f61;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .booking-form input[type="submit"]:hover {
+        background-color: #e66053;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BookMyService</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="booking-form">
+        <h2>Book <span id="serviceName">Service</span></h2>
+        <form id="bookingForm" action="confirm.html" method="POST">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required /><br /><br />
+
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea><br /><br />
+
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required /><br /><br />
+
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required /><br /><br />
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea><br /><br />
+
+          <input type="submit" value="Book Now" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 BookMyService. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceName = urlParams.get("service");
+
+      const serviceNameElement = document.getElementById("serviceName");
+      if (serviceName) {
+        serviceNameElement.textContent = serviceName;
+      }
+    </script>
+  </body>
+</html>

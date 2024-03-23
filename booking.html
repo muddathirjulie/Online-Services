@@ -81,7 +81,7 @@
     <main>
       <section class="booking-form">
         <h2>Book <span id="serviceName">Service</span></h2>
-        <form id="bookingForm" action="confirm.html" method="POST">
+        <form id="bookingForm" action="confirm.html" method="GET">
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required /><br /><br />
 
@@ -120,6 +120,32 @@
       if (serviceName) {
         serviceNameElement.textContent = serviceName;
       }
+
+      // Function to convert local time to GMT+2 time
+      function convertToGMTPlus2(dateString, timeString) {
+        const localDateTime = new Date(dateString + "T" + timeString);
+        const localOffset = localDateTime.getTimezoneOffset();
+        const gmtPlus2DateTime = new Date(
+          localDateTime.getTime() + (localOffset + 120) * 60000
+        ); // Adding 120 minutes for GMT+2
+        return gmtPlus2DateTime.toISOString().slice(0, 19).replace("T", " "); // Return date and time in YYYY-MM-DD HH:mm:ss format
+      }
+
+      // Update the form action URL with selected service, date, and time
+      const bookingForm = document.getElementById("bookingForm");
+      bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const selectedService =
+          document.getElementById("serviceName").textContent;
+        const selectedDate = document.getElementById("date").value;
+        const selectedTime = document.getElementById("time").value;
+
+        const gmtPlus2DateTime = convertToGMTPlus2(selectedDate, selectedTime);
+
+        const confirmationURL = `confirm.html?service=${selectedService}&date=${gmtPlus2DateTime}`;
+        window.location.href = confirmationURL; // Redirect to confirmation page with parameters
+      });
     </script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Confirmation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional styles for the confirmation page */
+      .confirmation {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .confirmation h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      .confirmation p {
+        margin-bottom: 20px;
+      }
+      .confirmation .total {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BookMyService</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="confirmation">
+        <h2>Payment Confirmation</h2>
+        <p>Thank you for booking <span id="serviceName">Service</span>.</p>
+        <p>Your service fee is R50 per hour.</p>
+        <p>Your labor charge is R500 per hour.</p>
+        <p>Your selected time and date: <span id="selectedDateTime"></span></p>
+        <p class="total">Total Payment: R<span id="totalAmount"></span></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 BookMyService. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceName = urlParams.get("service");
+      const selectedDateTime =
+        urlParams.get("date") + " " + urlParams.get("time");
+
+      const serviceNameElement = document.getElementById("serviceName");
+      const selectedDateTimeElement =
+        document.getElementById("selectedDateTime");
+      const totalAmountElement = document.getElementById("totalAmount");
+
+      if (serviceName) {
+        serviceNameElement.textContent = serviceName;
+      }
+
+      if (selectedDateTime) {
+        selectedDateTimeElement.textContent = selectedDateTime;
+      }
+
+      // Calculate total amount
+      const serviceFee = 50; // R50 per hour
+      const laborCharge = 500; // R500 per hour
+      const selectedHours = urlParams.get("time").split(":")[0]; // Extract hours from selected time
+
+      const totalAmount = (serviceFee + laborCharge * selectedHours).toFixed(2);
+      totalAmountElement.textContent = totalAmount;
+    </script>
+  </body>
+</html>

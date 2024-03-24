@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Checkout</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="payment.css" />
+    <style>
+      .confirmation {
+        display: none;
+      }
 
-    <link rel="stylesheet" href="checkout.css" />
+      .confirmation a {
+        display: block;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form id="checkoutForm" action="">
         <div class="row">
           <div class="col">
-            <h3 class="title">billing address</h3>
-
+            <h3 class="title">Billing Address</h3>
             <div class="inputBox">
-              <span>full name :</span>
-              <input type="text" placeholder="john doe" />
+              <span>Full Name:</span>
+              <input type="text" placeholder="John Doe" />
             </div>
             <div class="inputBox">
-              <span>email :</span>
+              <span>Email:</span>
               <input type="email" placeholder="someone@example.com" />
             </div>
             <div class="inputBox">
-              <span>address :</span>
-              <input type="text" placeholder="room - street - locality" />
+              <span>Address:</span>
+              <input type="text" placeholder="Room - Street - Locality" />
             </div>
             <div class="inputBox">
-              <span>city :</span>
+              <span>City:</span>
               <input type="text" placeholder="Cape Town" />
             </div>
-
             <div class="flex">
               <div class="inputBox">
-                <span>suburb :</span>
+                <span>Suburb:</span>
                 <input type="text" placeholder="Claremont" />
               </div>
               <div class="inputBox">
-                <span>zip code :</span>
+                <span>Zip Code:</span>
                 <input type="text" placeholder="7941" />
               </div>
             </div>
           </div>
 
           <div class="col">
-            <h3 class="title">payment</h3>
-
+            <h3 class="title">Payment</h3>
             <div class="inputBox">
-              <span>cards accepted :</span>
-              <img src="img/card_img.png" alt="" />
+              <span>Cards Accepted:</span>
+              <img src="payment.jpg" alt="" />
             </div>
             <div class="inputBox">
-              <span>name on card :</span>
-              <input type="text" placeholder="mr. john doe" />
+              <span>Name on Card:</span>
+              <input type="text" placeholder="Mr. John Doe" />
             </div>
             <div class="inputBox">
-              <span>credit card number :</span>
+              <span>Credit Card Number:</span>
               <input type="number" placeholder="1111-2222-3333-4444" />
             </div>
             <div class="inputBox">
-              <span>exp month :</span>
-              <input type="text" placeholder="january" />
+              <span>Exp Month:</span>
+              <input type="text" placeholder="January" />
             </div>
-
             <div class="flex">
               <div class="inputBox">
-                <span>exp year :</span>
+                <span>Exp Year:</span>
                 <input type="number" placeholder="2022" />
               </div>
               <div class="inputBox">
-                <span>CVV :</span>
+                <span>CVV:</span>
                 <input type="text" placeholder="123" />
               </div>
             </div>
@@ -78,11 +86,31 @@
         </div>
 
         <div class="checkout">
-          <a href="done.html"
-            ><button class="btn">Complete Transaction</button></a
-          >
+          <button id="completeTransactionBtn" class="btn">
+            Complete Transaction
+          </button>
         </div>
       </form>
+
+      <div id="confirmationMessage" class="confirmation">
+        <h2>Payment Successful!</h2>
+        <p>
+          Thank you for your payment. Your transaction has been completed
+          successfully. <br />
+          <a href="index.html">Back to Home</a>
+        </p>
+      </div>
     </div>
+
+    <script>
+      document
+        .getElementById("completeTransactionBtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("checkoutForm").style.display = "none";
+          document.getElementById("confirmationMessage").style.display =
+            "block";
+        });
+    </script>
   </body>
 </html>

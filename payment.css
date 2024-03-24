@@ -83,7 +83,7 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: #ff6f61;
     text-align: center;
     cursor: pointer;
     width: 80%;
@@ -96,5 +96,5 @@
 
 
 .container form .submit-btn:hover{
-  background: black;
+  background:  #e66053;
 }

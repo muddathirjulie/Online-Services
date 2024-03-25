@@ -134,16 +134,6 @@ footer {
     background-color: #e66053;
   }
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
   .services {
     padding: 50px 0;
     text-align: center;
@@ -193,15 +183,6 @@ footer {
   .btn:hover {
     background-color: #e66053;
   }
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
 
   .booking-form {
     text-align: center;
@@ -246,16 +227,5 @@ footer {
   .booking-form input[type="submit"]:hover {
     background-color: #e66053;
   }
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-
 
   

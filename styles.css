@@ -1,231 +1,108 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 1em;
+  display: inline;
+  margin-right: 20px;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 main {
-    padding: 2em;
+  padding: 20px 0;
 }
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
-}
-
-.services li {
-    list-style-type: none;
-    margin-bottom: 2em;
-}
-
-.booking-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-.booking-form label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.booking-form input,
-.booking-form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-
-.booking-form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-}
-
-
-/* .login-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-.login-form label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.login-form input {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
-
-.login-form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-} */
 
 .hero {
   background-image: url('services.jpg');
   background-size: cover;
   background-position: center;
-  color: black;
+  color: #fff;
   text-align: center;
-  padding: 230px 0;
-  width: 100%;
-  margin: 0; 
-  box-sizing: border-box;
+  padding: 200px 0;
 }
 
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6f61;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .btn:hover {
-    background-color: #e66053;
-  }
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 
-  .services {
-    padding: 50px 0;
-    text-align: center;
-  }
-  .services h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  .services ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .services li {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: transform 0.3s ease;
-  }
-  .services li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  .services h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  .services p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6f61;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .btn:hover {
-    background-color: #e66053;
-  }
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
 
-  .booking-form {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .booking-form h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  .booking-form form {
-    display: inline-block;
-    text-align: left;
-  }
-  .booking-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  .booking-form input[type="text"],
-  .booking-form input[type="email"],
-  .booking-form input[type="tel"],
-  .booking-form textarea,
-  .booking-form input[type="date"],
-  .booking-form input[type="time"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  .booking-form input[type="submit"] {
-    padding: 12px 30px;
-    background-color: #ff6f61;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .booking-form input[type="submit"]:hover {
-    background-color: #e66053;
-  }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-  
+.btn:hover {
+  background-color: #e66053;
+}
+
+.services {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.services ul {
+  list-style-type: none;
+}
+
+.services li {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.services li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.services li p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}

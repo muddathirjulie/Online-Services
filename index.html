@@ -13,12 +13,17 @@
         padding: 0;
       }
 
+      body,
+      html {
+        height: 100%;
+        overflow: hidden; /* Prevent scrolling */
+      }
+
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
       }
 
       .container {
@@ -63,29 +68,29 @@
       main {
         flex: 1;
         padding: 20px 0;
+        overflow-y: auto; /* Enable vertical scrolling for content overflow */
       }
 
       .hero {
-        background-image: url("services.jpg");
+        background-image: url("serv.jpg");
         background-size: cover;
         background-position: center;
         margin-left: 20px;
         margin-right: 20px;
         color: #fff;
         text-align: center;
-        padding: 217px 0;
+        padding: 100px 0; /* Adjusted padding */
+        height: 74vh; /* Adjusted height */
       }
 
       .hero h2 {
         font-size: 3rem;
         margin-bottom: 20px;
-        color: black;
       }
 
       .hero p {
         font-size: 1.2rem;
         margin-bottom: 30px;
-        color: black;
       }
 
       .btn {
@@ -142,6 +147,47 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        .hero {
+          background-image: url("serv.jpg");
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          text-align: center;
+          padding: 168px 0;
+          height: 77.5vh;
+        }
+
+        header {
+          font-size: large;
+          background-color: #333;
+          color: #fff;
+          padding: 20px 10px; /* Adjusted padding for smaller screens */
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          flex-direction: column; /* Arrange children vertically */
+        }
+
+        header h1 {
+          font-size: 1rem; /* Adjusted font size for smaller screens */
+          margin-bottom: 5px; /* Adjusted margin for smaller screens */
+        }
+
+        nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+        }
+
+        .footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+        }
       }
     </style>
   </head>

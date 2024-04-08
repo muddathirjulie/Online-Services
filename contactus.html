@@ -1,98 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
     <style>
-      * {
+      /* Additional styles for the contact page */
+      body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        background-color: #f5f5f5;
       }
-
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      header nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+      header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
       .contact {
-        color: white;
-        position: relative;
-        min-height: 100vh;
-        padding: 50px 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: url(wall.jpg);
-        background-size: cover;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-          1px 1px 0 #000;
+        color: #333;
+        padding: 50px;
+        text-align: center;
       }
-
-      .contact.content {
+      .contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .contact .content {
         max-width: 800px;
-        text-align: center;
+        margin: 0 auto 30px auto;
+        font-size: 1.1rem;
       }
-
-      .contact.h1 {
-        font-size: 50px;
-        font-weight: 500px;
+      .contact .container {
         display: flex;
-        text-align: center;
+        flex-wrap: wrap;
         justify-content: center;
       }
-
-      .contact.content p {
-        font-weight: 300px;
-        color: white;
-        text-align: center;
-        justify-content: center;
+      .contact .contact-info {
+        width: 300px;
+        margin: 0 20px 20px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left;
       }
-
-      .container {
-        width: 100%;
+      .contact .contact-info .box {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-bottom: 15px;
       }
-
-      .container.contact-info {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-      }
-
-      .container.contact-info.box {
-        position: relative;
-        display: flex;
-      }
-
-      .container.contact-info.box.icon {
-        min-width: 60px;
-        height: 60px;
-        background: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .contact .contact-info .box .icon {
+        background-color: #ff6f61;
+        color: #fff;
         border-radius: 50%;
-        font-size: 22px;
-      }
-
-      .container.contact-info.box.text {
+        width: 40px;
+        height: 40px;
         display: flex;
-        margin-left: 20px;
-        font-size: 16px;
-        color: white;
-        flex-direction: column;
-        font-weight: 300px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
       }
-
-      .container.contact-info.box.text h3 {
-        font-weight: 500px;
-        color: black;
+      .contact .contact-info .box .text h3 {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+      .contact .contact-info .box .text p {
+        margin: 0;
+        font-size: 1rem;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
       }
     </style>
   </head>
@@ -111,69 +111,49 @@
       <h1>Contact us</h1>
       <div class="content">
         <p>
-          Feel free to leave us a message or give us a call for any enquiries.
+          Feel free to leave us a message or give us a call for any inquiries.
         </p>
       </div>
-
       <div class="container">
         <div class="contact-info">
           <div class="box">
-            <div class="icon">
-              <i class="fa fa-map-pin" aria-hidden="true"></i>
-            </div>
+            <div class="icon"><i class="fa fa-map-pin"></i></div>
             <div class="text">
               <h3>Address</h3>
-              <p>
-                7 Any Road. <br />
-                Wonder Park. <br />
-                Cape Town. <br />
-                10111.
-              </p>
+              <p>7 Any Road,<br />Wonder Park,<br />Cape Town,<br />10111</p>
             </div>
           </div>
-          <br />
           <div class="box">
-            <div class="icon">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-            </div>
+            <div class="icon"><i class="fa fa-phone"></i></div>
             <div class="text">
               <h3>Phone</h3>
               <p>(+27) 21 345 6789</p>
             </div>
-            <br />
           </div>
           <div class="box">
-            <div class="icon">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </div>
+            <div class="icon"><i class="fa fa-envelope"></i></div>
             <div class="text">
               <h3>Email Address</h3>
               <p>info@bookmyservice.com</p>
             </div>
           </div>
-          <br />
           <div class="box">
-            <div class="icon">
-              <i class="fab fa-instagram-square"></i>
-            </div>
+            <div class="icon"><i class="fab fa-instagram-square"></i></div>
             <div class="text">
               <h3>Instagram</h3>
               <p>
-                <a href="https://www.instagram.com/fandfwoodworks/"
+                <a href="https://www.instagram.com/bookmyservice"
                   >BookMyService</a
                 >
               </p>
             </div>
           </div>
-          <br />
           <div class="box">
-            <div class="icon">
-              <i class="fab fa-facebook-square"></i>
-            </div>
+            <div class="icon"><i class="fab fa-facebook-square"></i></div>
             <div class="text">
               <h3>Facebook</h3>
               <p>
-                <a href="https://www.facebook.com/fandfwoodworks"
+                <a href="https://www.facebook.com/bookmyservice"
                   >BookMyService</a
                 >
               </p>
@@ -182,5 +162,8 @@
         </div>
       </div>
     </section>
+    <footer>
+      <p>&copy; 2024 BookMyService. All rights reserved.</p>
+    </footer>
   </body>
 </html>

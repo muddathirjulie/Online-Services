@@ -5,6 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookMyService - Services</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #ddd;
+      }
+      main {
+        padding: 20px;
+      }
+      .services {
+        margin-top: 20px;
+      }
+      .services h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .services ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .services li {
+        flex: 1 0 300px;
+        background-color: #f4f4f4;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .services li:hover {
+        transform: translateY(-5px);
+      }
+      .services h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .services p {
+        color: #666;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #e66053;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -45,7 +136,6 @@
             <p>Hire a gardener for landscaping and gardening services.</p>
             <a href="booking.html?service=gardener" class="btn">Book Now</a>
           </li>
-          <!-- Add more services as needed -->
         </ul>
       </section>
     </main>

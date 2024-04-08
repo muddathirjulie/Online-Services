@@ -10,17 +10,19 @@
       body {
         position: relative;
         min-height: 100vh; /* Ensure the body fills the viewport height */
+        font-family: Arial, sans-serif;
       }
       .booking-form {
         text-align: center;
-        padding: 50px 0;
+        padding: 50px 20px;
       }
       .booking-form h2 {
         font-size: 2rem;
         margin-bottom: 30px;
       }
       .booking-form form {
-        display: inline-block;
+        max-width: 600px;
+        margin: 0 auto;
         text-align: left;
       }
       .booking-form label {
@@ -34,12 +36,16 @@
       .booking-form textarea,
       .booking-form input[type="date"],
       .booking-form input[type="time"] {
-        width: 100%;
+        width: calc(100% - 22px);
         padding: 10px;
         margin-bottom: 20px;
         border: 1px solid #ddd;
         border-radius: 5px;
         box-sizing: border-box;
+        font-size: 16px;
+      }
+      .booking-form textarea {
+        height: 120px;
       }
       .booking-form input[type="submit"] {
         padding: 12px 30px;
@@ -53,6 +59,9 @@
       }
       .booking-form input[type="submit"]:hover {
         background-color: #e66053;
+      }
+      .btn-container {
+        text-align: center;
       }
       footer {
         background-color: #333;
@@ -83,27 +92,29 @@
         <h2>Book <span id="serviceName">Service</span></h2>
         <form id="bookingForm" action="confirm.html" method="GET">
           <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required /><br /><br />
+          <input type="text" id="name" name="name" required /><br />
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required /><br /><br />
+          <input type="email" id="email" name="email" required /><br />
 
           <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required /><br /><br />
+          <input type="tel" id="phone" name="phone" required /><br />
 
           <label for="address">Address:</label>
-          <textarea id="address" name="address" required></textarea><br /><br />
+          <textarea id="address" name="address" required></textarea><br />
 
           <label for="date">Preferred Date:</label>
-          <input type="date" id="date" name="date" required /><br /><br />
+          <input type="date" id="date" name="date" required /><br />
 
           <label for="time">Preferred Time:</label>
-          <input type="time" id="time" name="time" required /><br /><br />
+          <input type="time" id="time" name="time" required /><br />
 
           <label for="comments">Comments:</label>
-          <textarea id="comments" name="comments"></textarea><br /><br />
+          <textarea id="comments" name="comments"></textarea><br />
 
-          <input type="submit" value="Book Now" />
+          <div class="btn-container">
+            <input type="submit" value="Book Now" />
+          </div>
         </form>
       </section>
     </main>

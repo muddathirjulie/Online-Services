@@ -63,27 +63,13 @@
       .btn-container {
         text-align: center;
       }
-      footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
     </style>
   </head>
   <body>
     <header>
       <h1>BookMyService</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-        </ul>
+      <nav id="dynamicNav">
+        <!-- Navigation links will be generated dynamically here -->
       </nav>
     </header>
 
@@ -119,10 +105,12 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 BookMyService. All rights reserved.</p>
+    <footer id="dynamicFooter">
+      <!-- Footer content will be generated dynamically here -->
     </footer>
 
+    <script src="nav.js"></script>
+    <script src="footer.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const serviceName = urlParams.get("service");

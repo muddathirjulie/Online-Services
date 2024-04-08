@@ -18,10 +18,6 @@
         padding: 20px 0;
         text-align: center;
       }
-      header h1 {
-        margin: 0;
-        font-size: 2rem;
-      }
       nav ul {
         list-style-type: none;
         padding: 0;
@@ -63,13 +59,8 @@
   <body>
     <header>
       <h1>BookMyService</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-        </ul>
+      <nav id="dynamicNav">
+        <!-- Navigation links will be generated dynamically here -->
       </nav>
     </header>
 
@@ -97,8 +88,9 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 BookMyService. All rights reserved.</p>
+    <footer id="dynamicFooter">
+      <!-- Footer content will be generated dynamically here -->
     </footer>
+    <script src="nav.js"></script>
   </body>
 </html>
